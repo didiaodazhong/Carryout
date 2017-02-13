@@ -40,21 +40,19 @@ public class SellerDetailActivity extends BaseActivity {
 //        sellerId = intent.getStringExtra("sid");
         sellerId =  intent.getLongExtra("sid",-1);
         String name = intent.getStringExtra("name");
-        Log.i(TAG, "onCreate:SellerId " + sellerId + "----name：" + name);
+//        Log.i(TAG, "onCreate:SellerId " + sellerId + "----name：" + name);
         toolbarSeller = (Toolbar) findViewById(R.id.toolbar_seller);
         tabLayoutSeller = (TabLayout) findViewById(R.id.tabLayout_seller);
         viewPagerSeller = (ViewPager) findViewById(R.id.viewPager_seller);
         frameSellerDetail = (FrameLayout) findViewById(R.id.frame_seller_detail);
 
 //        tvTitle = (TextView) findViewById(R.id.tv_title);
-
 //        tvShop = (TextView) findViewById(R.id.tv_shop);
 //        tvShop.setText(name + "--id--" + SellerId);
 //        tvTitle.setText(name);
         toolbarSeller.setTitle(name);
         setSupportActionBar(toolbarSeller);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         sellerAdapter = new SellerAdapter(getSupportFragmentManager());
         viewPagerSeller.setAdapter(sellerAdapter);
         tabLayoutSeller.setupWithViewPager(viewPagerSeller);

@@ -29,7 +29,6 @@ public abstract class BasePresenter {
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-
             responseInfo = retrofit.create(ResponseInfoAPI.class);
         }
     }

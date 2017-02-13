@@ -9,7 +9,7 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 
 /**
- * Created by itheima.
+ * Created by peixing.
  */
 
 public class AnimationUtils {

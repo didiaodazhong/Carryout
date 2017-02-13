@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 
 /**
- * Created by itheima.
+ * Created by peixing.
  */
 
 public class UiUtils {

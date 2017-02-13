@@ -31,7 +31,7 @@ public class HomeFragmentPresenter extends BasePresenter {
      */
     public void getData() {
         Call<ResponseInfo> call = responseInfo.home();
-        Log.i(TAG, "getData: " + responseInfo.toString());
+//        Log.i(TAG, "getData: " + responseInfo.toString());
 //        call.enqueue(new CallbackAdapter());
         call.enqueue(new Callback<ResponseInfo>() {
             @Override

@@ -46,7 +46,6 @@ public class OrderFragmentPresenter extends BasePresenter {
                 view.success(orders);
                 break;
         }
-
     }
 
 

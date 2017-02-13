@@ -18,8 +18,6 @@ public class OrderFragmentModule {
         this.view = view;
     }
 
-
-
     @Provides
    public OrderFragmentPresenter provideOrderFragmentPresenter() {
         return new OrderFragmentPresenter(view);

@@ -453,7 +453,6 @@ public class GoodsFragment extends BaseFragment implements AdapterView.OnItemCli
                 int[] targetLocation = new int[2];
                 // 将Activity加载控件容器获取到
                 if (container == null) {
-                    //TODO
                     container = (FrameLayout) UiUtils.getContainder(v, R.id.frame_seller_detail);
                 }
                 container.findViewById(R.id.cart).getLocationOnScreen(targetLocation);

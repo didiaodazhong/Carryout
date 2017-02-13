@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by itheima.
+ * Created by peixing.
  */
 @Module
 public class GoodsFragmentModule {

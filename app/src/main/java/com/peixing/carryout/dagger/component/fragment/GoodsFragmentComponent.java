@@ -7,7 +7,7 @@ import com.peixing.carryout.ui.fragment.GoodsFragment;
 import dagger.Component;
 
 /**
- * Created by itheima.
+ * Created by peixing.
  */
 @Component(modules = GoodsFragmentModule.class)
 public interface GoodsFragmentComponent {

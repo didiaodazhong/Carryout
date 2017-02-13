@@ -7,7 +7,7 @@ import com.peixing.carryout.model.net.bean.GoodsInfo;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Created by itheima.
+ * Created by peixing.
  */
 
 public class ShoppingCartManager {

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Observable;
 
 /**
- * Created by itheima.
+ * Created by peixing.
  */
 public class OrderObserver{
     /* 订单状态

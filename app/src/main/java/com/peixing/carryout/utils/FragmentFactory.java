@@ -8,9 +8,8 @@ import com.peixing.carryout.ui.fragment.MoreFragment;
 import com.peixing.carryout.ui.fragment.OrderFragment;
 
 /**
- * 作者： itheima
+ * 作者： peixing
  * 时间：2016-10-17 10:42
- * 网址：http://www.itheima.com
  */
 
 public class FragmentFactory {

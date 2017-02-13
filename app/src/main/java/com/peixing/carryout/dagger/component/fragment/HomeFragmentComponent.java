@@ -13,6 +13,5 @@ import dagger.Component;
 
 @Component(modules = HomeFragmentModule.class)
 public interface HomeFragmentComponent {
-
     void in(HomeFragment fragment);
 }
