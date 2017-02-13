@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+//dagger2工具在module中的使用引入
+apply plugin: 'com.neenbedankt.android-apt'
+//GreenDao自动生成代码工具引入
+apply plugin: 'org.greenrobot.greendao'
+
+
+android {
+    signingConfigs {
+        carryout {
+            keyAlias 'carryout'
+            keyPassword 'pingfan1128'
+            storeFile file('C:/Users/peixing/Desktop/carryout.jks')
+            storePassword 'pingfan1128'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.peixing.carryout"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.carryout
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.carryout
+        }
+    }
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.peixing.carryout.gen'
+        targetGenDir 'src/main/java'
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //生成代码工具关联dagger2
+    //联网工具
+    //控件初始化
+    //json数据解析
+    //将retrofit与gson关联
+    //greendao工具引入
+    //
+    //    compile 'org.greenrobot:greendao-generator:3.2.0'
+    //底部导航栏控件引入
+    compile files('libs/AMap_Search_V3.4.0_20160811.jar')
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+    compile files('libs/AMap_2DMap_V2.9.0_20160525.jar')
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.google.dagger:dagger:2.8'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.1'
+    compile 'com.android.support:support-v4:25.1.1'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.daimajia.slider:library:1.1.5'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.google.dagger:dagger-compiler:2.8'
+}
